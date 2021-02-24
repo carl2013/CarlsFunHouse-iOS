@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13368D2925E6DC2000E8527D /* JunkDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13368D2825E6DC2000E8527D /* JunkDrawer.framework */; };
+		13368D2A25E6DC2000E8527D /* JunkDrawer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13368D2825E6DC2000E8527D /* JunkDrawer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C39FEF2625E55AB8008CF3E7 /* Carls_Fun_HouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FEF2525E55AB8008CF3E7 /* Carls_Fun_HouseApp.swift */; };
 		C39FEF2825E55AB8008CF3E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FEF2725E55AB8008CF3E7 /* ContentView.swift */; };
 		C39FEF2A25E55AB9008CF3E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FEF2925E55AB9008CF3E7 /* Assets.xcassets */; };
@@ -15,8 +17,6 @@
 		C39FEF4325E55ABA008CF3E7 /* Carls_Fun_HouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FEF4225E55ABA008CF3E7 /* Carls_Fun_HouseUITests.swift */; };
 		C39FEF5425E55B42008CF3E7 /* GenerateRandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FEF5325E55B42008CF3E7 /* GenerateRandomData.swift */; };
 		C39FEF5525E55B42008CF3E7 /* GenerateRandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FEF5325E55B42008CF3E7 /* GenerateRandomData.swift */; };
-		C39FEF5B25E60737008CF3E7 /* JunkDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FEF5A25E60737008CF3E7 /* JunkDrawer.framework */; };
-		C39FEF5C25E60737008CF3E7 /* JunkDrawer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C39FEF5A25E60737008CF3E7 /* JunkDrawer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C39FEF5D25E60737008CF3E7 /* Embed Frameworks */ = {
+		13368D2B25E6DC2000E8527D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C39FEF5C25E60737008CF3E7 /* JunkDrawer.framework in Embed Frameworks */,
+				13368D2A25E6DC2000E8527D /* JunkDrawer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13368D2825E6DC2000E8527D /* JunkDrawer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JunkDrawer.framework; path = "../CarlsFunHouse-Android/JunkDrawer/build/bin/iosX64/debugFramework/JunkDrawer.framework"; sourceTree = "<group>"; };
 		C39FEF2225E55AB8008CF3E7 /* Carls Fun House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carls Fun House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39FEF2525E55AB8008CF3E7 /* Carls_Fun_HouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carls_Fun_HouseApp.swift; sourceTree = "<group>"; };
 		C39FEF2725E55AB8008CF3E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39FEF5B25E60737008CF3E7 /* JunkDrawer.framework in Frameworks */,
+				13368D2925E6DC2000E8527D /* JunkDrawer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +157,7 @@
 		C39FEF5925E60737008CF3E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13368D2825E6DC2000E8527D /* JunkDrawer.framework */,
 				C39FEF5A25E60737008CF3E7 /* JunkDrawer.framework */,
 			);
 			name = Frameworks;
@@ -171,7 +173,7 @@
 				C39FEF1E25E55AB8008CF3E7 /* Sources */,
 				C39FEF1F25E55AB8008CF3E7 /* Frameworks */,
 				C39FEF2025E55AB8008CF3E7 /* Resources */,
-				C39FEF5D25E60737008CF3E7 /* Embed Frameworks */,
+				13368D2B25E6DC2000E8527D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,7 +369,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = ../CarlsFunHouse/JunkDrawer/build/bin/iosX64/debugFramework;
+				FRAMEWORK_SEARCH_PATHS = "../CarlsFunHouse-Android/JunkDrawer/build/bin/iosX64/debugFramework";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -429,7 +431,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = ../CarlsFunHouse/JunkDrawer/build/bin/iosX64/debugFramework;
+				FRAMEWORK_SEARCH_PATHS = "../CarlsFunHouse-Android/JunkDrawer/build/bin/iosX64/debugFramework";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
