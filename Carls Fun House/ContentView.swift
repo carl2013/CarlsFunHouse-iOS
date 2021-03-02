@@ -8,6 +8,28 @@
 import SwiftUI
 import JunkDrawer
 
+class CacheMaster: ObservableObject, JunkDrawerOutputPipe{
+    @Published var data:String
+    private var cacher: Cacher?
+    init() {
+        data = "No Data Retrieved"
+        cacher = Cacher(outSideDataConcern: self)
+    }
+    
+    func acceptUUIDAndIntData(data: String) {
+        self.data = data
+    }
+    
+    func saveUUIDAndIntData(data: Array<UUIDAndInt>){
+        if let cacher = cacher{
+            cacher.saveUUIDAndIntData(data: data)
+        } else {
+            print("cacher is null")
+        }
+    }
+    
+}
+
 struct LabelView:View{
     let text:String
     var body: some View{
@@ -21,19 +43,18 @@ struct LabelView:View{
 }
 
 struct ContentView: View {
-    @State var textToShow = "No Data Retrieved"
+    @ObservedObject var cacheMaster = CacheMaster()
+    @State var counter = 0
     var body: some View {
-        let cacher = Cacher()
         VStack{
             Button(action: {
-                let data = generate100things()
-                cacher.saveSomeUUIDsAndRandomInts(data: data)
-                textToShow = cacher.getSavedOutData()
+                cacheMaster.saveUUIDAndIntData(data: generate100things())
             }, label: {
                 Text("Generate and Store Data")
             })
-                .padding()
-            LabelView(text:textToShow)
+            Button("Tap me"){self.counter += 1}.padding()
+            LabelView(text: String(counter))
+            LabelView(text:cacheMaster.data)
                 .padding()
         }
         
